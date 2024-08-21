@@ -1,5 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
+import {useState} from "react"; // useState is a react Hook , a react trick that helps track data / properties in between function calls
 
 function App() {
   return (
