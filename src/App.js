@@ -3,8 +3,7 @@ import {useState} from "react"; // useState is a react Hook , a react trick that
 
 function App() {
   const [time, setTime] = useState(0); // time is current state 2nd value is the function to update our state, the 0 is the initial state 
-
-
+const [running, setRunning] = useState(false);
   return (
     <><h1>Stopwatch</h1> 
     <div>
@@ -13,9 +12,9 @@ function App() {
       <span>{("0" + ((time/10) % 100))}: </span>  
     </div>
     <div>
-      <button>Start</button>
-      <button>Stop</button>
-      <button>Reset</button>
+      <button onClick={()=>{setRunning(true)}}>Start</button>
+      <button onClick={()=>{setRunning(false)}}>Stop</button>
+      <button onClick={()=> {setTime(0)}} >Reset</button>
     </div>
     </>
   
